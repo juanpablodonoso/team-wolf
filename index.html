@@ -17,8 +17,31 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+
     </head>
-    <body id="page-top">
+    <style type="text/css">
+        .highlighted
+        {
+            background-color: yellow;
+        }
+        .highlight
+        {
+            background-color: #fff34d;
+            -moz-border-radius: 5px; /* FF1+ */
+            -webkit-border-radius: 5px; /* Saf3-4 */
+            border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+        }
+        .highlight
+        {
+            padding: 1px 4px;
+            margin: 0 -4px;
+        }
+    </style>
+    <body id="realTimeContents">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
@@ -31,11 +54,12 @@
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Galery</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scientific">Animmal anatomy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#names">Names</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#name">Names</a></li>
                         <li class="nav-item"><a class="nav-link" href="#diet">Diet information</a></li>
                         <li class="nav-item"><a class="nav-link" href="#communication">Animal communication</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#classification">Scientific name and classification</a></li>
                         <li class="nav-item"><a class="nav-link" href="#biology">Animal anatonomy and Biology</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#facts">Facts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#behaviour">Behaviour</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,8 +73,11 @@
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5"></p>
-                        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
+                        <img class="img-fluid" src="assets/img/bg-masthead .jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-category text-white-50">Category</div>
+                            <div class="project-name">Project Name</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -60,83 +87,63 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">
-                        <h2 class="text-white mt-0">We've got what you need!</h2>
+                        <h2 class="text-white mt-0">We're the Wolves</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Start Bootstrap has everything you need to get your new website up and running in no time! Choose one of our open source, free to download, and easy to use themes! No strings attached!</p>
-                        <a class="btn btn-light btn-xl" href="#services">Get Started!</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Services-->
-        <section class="page-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">At Your Service</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Sturdy Themes</h3>
-                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Up to Date</h3>
-                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Ready to Publish</h3>
-                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 text-center">
-                        <div class="mt-5">
-                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                            <h3 class="h4 mb-2">Made with Love</h3>
-                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        <p class="text-white-75 mb-4">We're an agile team</p>
+                        <a class="btn btn-light btn-xl" href="#contact">Contact us!</a>
+                        <div class="searchContend_h">
+                            <div class="ui-grid-c">
+                                <div class="ui-block-a">
+                                    <input name="text-12" id="text-12" value="" type="text" class="textSearchvalue_h" />
+                                </div>
+                                <div class="ui-block-b">
+                                    <a href="#" class="searchButtonClickText_h btn btn-light btn-xl">Search</a>
+                                </div>
+                                <div class="ui-block-c">
+                                    <a href="#" class="next_h btn btn-light btn-xl">Next</a>
+                                </div>
+                                <div class="ui-block-d">
+                                    <a href="#" class="previous_h btn btn-light btn-xl">Previous</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <!-- Portfolio-->
         <div id="portfolio">
-            <div class="container-fluid p-0">
+            <div class="container-fluid p-0 bg-dark text-white">
                 <div class="row g-0">
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/thumbnails/wolve1.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/wolve1.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Single wolf description</div>
+                                <div class="project-name">Single wolf</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/thumbnails/wolve2.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/wolve2.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Wolves description</div>
+                                <div class="project-name">Wolves</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/thumbnails/wolve3.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/wolve3.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Wolves couple</div>
+                                <div class="project-name">Wolves couple</div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <!-- <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
                             <div class="portfolio-box-caption">
@@ -144,17 +151,17 @@
                                 <div class="project-name">Project Name</div>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                        <a class="portfolio-box" href="assets/img/portfolio/thumbnails/wolve4.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/wolve4.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Dark wolf description</div>
+                                <div class="project-name">Dark wolf</div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-lg-4 col-sm-6">
+                    <!-- <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
                             <div class="portfolio-box-caption p-3">
@@ -162,19 +169,19 @@
                                 <div class="project-name">Project Name</div>
                             </div>
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
-        <!-- Call to action-->
+        <!-- Call to action
         <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
                 <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
             </div>
-        </section>
+        </section> -->
         <!-- Contact-->
-        <section class="page-section" id="contact">
+        <section class="page-section bg-dark text-white" id="contact">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 col-xl-6 text-center">
@@ -248,40 +255,302 @@
                 </div>
             </div>
         </section>
-        <section class="page-section" id="scientific">
+        <section class="page-section bg-dark text-white" id="scientific">
             <div class="container px-4 px-lg-5">
-               <h3>Animal anatomy and biology</h3>
-                      <div>Adult wolves measure 105–160 cm (41–63 in) in length and 80–85 cm (31–33 in) at shoulder height. The tail measures 29–50 cm (11–20 in) in length, the ears 90–110 mm (3
-                        1⁄2– 43⁄8 in) in height, and the hind feet are 220–250 mm (85⁄8–97⁄8 in). The size and weight of the modern wolf increases proportionally with latitude in accord with Bergmann's rule. The mean body mass of the wolf is 40 kg (88 lb), the smallest specimen recorded at 12 kg (26 lb) and the largest at 79.4 kg (175 lb).On average, European wolves weigh 38.5 kg (85 lb), North American wolves 36 kg (79 lb), and Indian and Arabian wolves 25 kg (55 lb).Females in any given wolf population typically weigh 2.3–4.5 kg (5–10 lb) less than males. Wolves weighing over 54 kg (119 lb) are uncommon, though exceptionally large individuals have been recorded in Alaska and Canada. In central Russia, exceptionally large males can reach a weight of 69–79 kg (152–174 lb).[41]</div>
+              <h3>Scientific name and classification</h3>
+              <div>
+                Canis Lupus: The wolf (Canis lupus), also known as the gray wolf or
+                grey wolf, is a large canine native to Eurasia and North America. More
+                than thirty subspecies of Canis lupus have been recognized, and gray
+                wolves, as popularly understood, comprise wild subspecies. The wolf is
+                the largest extant member of the family Canidae. It is also
+                distinguished from other Canis species by its less pointed ears and
+                muzzle, as well as a shorter torso and a longer tail. The wolf is
+                nonetheless related closely enough to smaller Canis species, such as
+                the coyote and the golden jackal, to produce fertile hybrids with
+                them. The banded fur of a wolf is usually mottled white, brown, gray,
+                and black, although subspecies in the arctic region may be nearly all
+                white.
+              </div>
+              <img
+                src="https://xftlowx.weebly.com/uploads/9/4/4/8/94480009/wolves-of-the-world-by-rogerdhall-d8tqbqg.jpg"
+                alt=""
+                srcset=""
+                class="container-md"
+              />
             </div>
-        </section>
-        <section class="page-section" id="names">
+          </section>
+          <section class="page-section bg-dark text-white" id="diet">
             <div class="container px-4 px-lg-5">
-                <h3>Names</h3>
-                
+              <h3>Diet</h3>
+              <div>
+                Like all land mammals that are pack hunters, the wolf feeds
+                predominantly on wild herbivorous hoofed mammals that can be divided
+                into large size 240–650 kg (530–1,430 lb) and medium size 23–130 kg
+                (51–287 lb), and have a body mass similar to that of the combined mass
+                of the pack members.[53][54] The wolf specializes in preying on the
+                vulnerable individuals of large prey,[39] with a pack of 15 able to
+                bring down an adult moose.[55] The variation in diet between wolves
+                living on different continents is based on the variety of hoofed
+                mammals and of available smaller and domesticated prey.[56] In North
+                America, the wolf's diet is dominated by wild large hoofed mammals
+                (ungulates) and medium-sized mammals. In Asia and Europe, their diet
+                is dominated by wild medium-sized hoofed mammals and domestic species.
+                The wolf depends on wild species, and if these are not readily
+                available, as in Asia, the wolf is more reliant on domestic
+                species.[56] Across Eurasia, wolves prey mostly on moose, red deer,
+                roe deer and wild boar.[57] In North America, important range-wide
+                prey are elk, moose, caribou, white-tailed deer and mule deer.[58]
+                Wolves can digest their meal in a few hours and can feed several times
+                in one day, making quick use of large quantities of meat.[59] A
+                well-fed wolf stores fat under the skin, around the heart, intestines,
+                kidneys, and bone marrow, particularly during the autumn and
+                winter.[60] Nonetheless, wolves are not fussy eaters. Smaller-sized
+                animals that may supplement their diet include rodents, hares,
+                insectivores and smaller carnivores. They frequently eat waterfowl and
+                their eggs. When such foods are insufficient, they prey on lizards,
+                snakes, frogs, and large insects when available.[61] Wolves in
+                northern Minnesota prey on northern pike in freshwater streams.[62]
+                The diet of coastal wolves in Alaska includes 20% salmon,[63] while
+                those of coastal wolves in British Columbia includes 25% marine
+                sources, and those on the nearby islands 75%.[64] In Europe, wolves
+                eat apples, pears, figs, melons, berries and cherries. In North
+                America, wolves eat blueberries and raspberries. Wolves also eat
+                grass, which may provide some vitamins, but is most likely used mainly
+                to induce vomiting to rid themselves of intestinal parasites or long
+                guard hairs.[65] They are known to eat the berries of mountain-ash,
+                lily of the valley, bilberries, cowberries, European black nightshade,
+                grain crops, and the shoots of reeds.[61] In times of scarcity, wolves
+                will readily eat carrion.[61] In Eurasian areas with dense human
+                activity, many wolf populations are forced to subsist largely on
+                livestock and garbage.[57] Prey in North America continue to occupy
+                suitable habitats with low human density, the wolves eating livestock
+                and garbage only in dire circumstances.[66] Cannibalism is not
+                uncommon in wolves during harsh winters, when packs often attack weak
+                or injured wolves and may eat the bodies of dead pack members
+              </div>
+              <img
+                src="https://live.staticflickr.com/65535/49072627321_d056f82b59_b.jpg"
+                alt=""
+                srcset=""
+                class="container-md"
+              />
             </div>
-        </section>
-        <section class="page-section" id="diet">
+          </section>
+          <section class="page-section bg-dark text-white" id="communication">
             <div class="container px-4 px-lg-5">
-                
+              <h3>Communication</h3>
+              <div>
+                Wolves communicate using vocalizations, body postures, scent, touch,
+                and taste.[97] The phases of the moon have no effect on wolf
+                vocalization, and despite popular belief, wolves do not howl at the
+                moon.[98] Wolves howl to assemble the pack usually before and after
+                hunts, to pass on an alarm particularly at a den site, to locate each
+                other during a storm, while crossing unfamiliar territory, and to
+                communicate across great distances.[99] Wolf howls can under certain
+                conditions be heard over areas of up to 130 km2 (50 sq mi).[39] Other
+                vocalizations include growls, barks and whines. Wolves do not bark as
+                loudly or continuously as dogs do in confrontations, rather barking a
+                few times and then retreating from a perceived danger.[100] Aggressive
+                or self-assertive wolves are characterized by their slow and
+                deliberate movements, high body posture and raised hackles, while
+                submissive ones carry their bodies low, flatten their fur, and lower
+                their ears and tail.[101] Scent marking involves urine, feces, and
+                anal gland scents. This is more effective at advertising territory
+                than howling and is often used in combination with scratch marks.
+                Wolves increase their rate of scent marking when they encounter the
+                marks of wolves from other packs. Lone wolves will rarely mark, but
+                newly bonded pairs will scent mark the most.[39] These marks are
+                generally left every 240 m (260 yd) throughout the territory on
+                regular travelways and junctions. Such markers can last for two to
+                three weeks,[94] and are typically placed near rocks, boulders, trees,
+                or the skeletons of large animals.[35] Raised leg urination is
+                considered to be one of the most important forms of scent
+                communication in the wolf, making up 60–80% of all scent marks
+                observed.
+              </div>
+              <div>
+                <strong>Interactions with other predators</strong>
+                Wolves typically dominate other canid species in areas where they both
+                occur. In North America, incidents of wolves killing coyotes are
+                common, particularly in winter, when coyotes feed on wolf kills.
+                Wolves may attack coyote den sites, digging out and killing their
+                pups, though rarely eating them. There are no records of coyotes
+                killing wolves, though coyotes may chase wolves if they outnumber
+                them.[69] According to a press release by the U.S. Department of
+                Agriculture in 1921, the infamous Custer Wolf relied on coyotes to
+                accompany him and warn him of danger. Though they fed from his kills,
+                he never allowed them to approach him.[70] Interactions have been
+                observed in Eurasia between wolves and golden jackals, the latter's
+                numbers being comparatively small in areas with high wolf
+                densities.[35][69][71] Wolves also kill red, Arctic and corsac foxes,
+                usually in disputes over carcasses, sometimes eating them.[35][72] A
+                wolf, a bear, coyotes and ravens compete over a kill Brown bears
+                typically dominate wolf packs in disputes over carcasses, while wolf
+                packs mostly prevail against bears when defending their den sites.
+                Both species kill each other's young. Wolves eat the brown bears they
+                kill, while brown bears seem to eat only young wolves.[73] Wolf
+                interactions with American black bears are much rarer because of
+                differences in habitat preferences. Wolves have been recorded on
+                numerous occasions actively seeking out American black bears in their
+                dens and killing them without eating them. Unlike brown bears,
+                American black bears frequently lose against wolves in disputes over
+                kills.[74] Wolves also dominate and sometimes kill wolverines, and
+                will chase off those that attempt to scavenge from their kills.
+                Wolverines escape from wolves in caves or up trees.[75] Wolves may
+                interact and compete with felids, such as the Eurasian lynx, which may
+                feed on smaller prey where wolves are present[76] and may be
+                suppressed by large wolf populations.[77] Wolves encounter cougars
+                along portions of the Rocky Mountains and adjacent mountain ranges.
+                Wolves and cougars typically avoid encountering each other by hunting
+                at different elevations for different prey (niche partitioning). In
+                winter, when snow accumulation forces their prey into valleys,
+                interactions between the two species become more likely. Wolves in
+                packs usually dominate cougars and can steal their kills or even kill
+                them,[78] while one-to-one encounters tend to be dominated by the cat.
+                There are several documented cases of cougars killing wolves.[79]
+                Wolves more broadly affect cougar population dynamics and distribution
+                by dominating territory and prey opportunities and disrupting the
+                feline's behaviour.[80] Wolf and Siberian tiger interactions are
+                well-documented in the Russian Far East, where tigers significantly
+                depress wolf numbers, sometimes to the point of localized extinction.
+                Only human depletion of tiger numbers appears to protect wolves from
+                competitive exclusion from them. With perhaps only four proven records
+                of tigers killing wolves, these cases are rare; attacks appear to be
+                competitive rather than predatory in nature.[81][76] In Israel,
+                Central Asia and India wolves may encounter striped hyenas, usually in
+                disputes over carcasses. Striped hyenas feed extensively on
+                wolf-killed carcasses in areas where the two species interact.
+                One-to-one, hyenas dominate wolves, and may prey on them,[82] but wolf
+                packs can drive off single or outnumbered hyenas.[83][84] There is at
+                least one case in Israel of a hyena associating and cooperating with a
+                wolf pack. It is proposed that the hyena could benefit from the
+                wolves' superior ability to hunt large, agile prey. The wolves could
+                benefit from the hyena's superior sense of smell, to locate and dig
+                out tortoises, to crack open large bones, and to tear open discarded
+                food containers like tin cans
+              </div>
+              <img
+                src="https://www.magicmurals.com/media/amasty/webp/catalog/product/cache/155d73b570b90ded8a140526fcb8f2da/d/p/dpx-0002095221_jpg.webp"
+                alt=""
+                srcset=""
+                class="container-md"
+              />
             </div>
-        </section>
-        <section class="page-section" id="communication">
+          </section>
+          <section class="page-section bg-dark text-white" id="name">
             <div class="container px-4 px-lg-5">
-                <h3>Communication</h3>
-              
+              <div>
+                Wolf Canis Lupus The wolf (Canis lupus), also known as the gray wolf
+                or grey wolf, is a large canine native to Eurasia and North America.
+                More than thirty subspecies of Canis lupus have been recognized, and
+                gray wolves, as popularly understood, comprise wild subspecies. The
+                wolf is the largest extant member of the family Canidae. It is also
+                distinguished from other Canis species by its less pointed ears and
+                muzzle, as well as a shorter torso and a longer tail. The wolf is
+                nonetheless related closely enough to smaller Canis species, such as
+                the coyote and the golden jackal, to produce fertile hybrids with
+                them. The banded fur of a wolf is usually mottled white, brown, gray,
+                and black, although subspecies in the arctic region may be nearly all
+                white.
+              </div>
+              <img
+                src="https://en.wikipedia.org/wiki/List_of_gray_wolf_populations_by_country#/media/File:Grey_wolf_distribution_with_subdivisions.PNG"
+                alt=""
+                class="container-md"
+              />
             </div>
-        </section>
-        <section class="page-section" id="classification">
+          </section>
+          <section class="page-section bg-dark text-white" id="biology">
+            <h3>Animal anatomy and biology</h3>
             <div class="container px-4 px-lg-5">
-              
+              Adult wolves measure 105–160 cm (41–63 in) in length and 80–85 cm (31–33
+              in) at shoulder height. The tail measures 29–50 cm (11–20 in) in length,
+              the ears 90–110 mm (3 1⁄2– 43⁄8 in) in height, and the hind feet are
+              220–250 mm (85⁄8–97⁄8 in). The size and weight of the modern wolf
+              increases proportionally with latitude in accord with Bergmann's rule.
+              The mean body mass of the wolf is 40 kg (88 lb), the smallest specimen
+              recorded at 12 kg (26 lb) and the largest at 79.4 kg (175 lb).On
+              average, European wolves weigh 38.5 kg (85 lb), North American wolves 36
+              kg (79 lb), and Indian and Arabian wolves 25 kg (55 lb).Females in any
+              given wolf population typically weigh 2.3–4.5 kg (5–10 lb) less than
+              males. Wolves weighing over 54 kg (119 lb) are uncommon, though
+              exceptionally large individuals have been recorded in Alaska and Canada.
+              In central Russia, exceptionally large males can reach a weight of 69–79
+              kg (152–174 lb).
             </div>
-        </section>
-        <section class="page-section" id="biology">
+            <img
+              src="http://wolffacts.org/thecontent/images/2014/01/Anatomy%20of%20Wolf.jpg"
+              alt=""
+              srcset=""
+              class="container-md"
+            />
             <div class="container px-4 px-lg-5">
-              
+              Pelage The wolf has very dense and fluffy winter fur, with a short
+              undercoat and long, coarse guard hairs. Most of the undercoat and some
+              guard hairs are shed in spring and grow back in autumn. The longest
+              hairs occur on the back, particularly on the front quarters and neck.
+              Especially long hairs grow on the shoulders and almost form a crest on
+              the upper part of the neck. The hairs on the cheeks are elongated and
+              form tufts. The ears are covered in short hairs and project from the
+              fur. Short, elastic and closely adjacent hairs are present on the limbs
+              from the elbows down to the calcaneal tendons.[ The winter fur is highly
+              resistant to the cold. Wolves in northern climates can rest comfortably
+              in open areas at −40 °C (−40 °F) by placing their muzzles between the
+              rear legs and covering their faces with their tail. Wolf fur provides
+              better insulation than dog fur and does not collect ice when warm breath
+              is condensed against it.
             </div>
-        </section>
+          </section>
+          <section class="page-section bg-dark text-white" id="facts">
+            <div class="container px-4 px-lg-5">
+              <h3>Facts</h3>
+              <div>
+                1.- Wolf is portrait multiple times in popular childrens books and
+                usually as a bad image. 2.- Wolf pack size can range from 2 to 36
+                wolves, with the average pack size consisting of 6 wolves. A pack
+                usually consists of a breeding pair, their current offspring, and a
+                few yearlings. There also may be a few related and/or unrelated adult
+                wolves in the pack. 3.- It’s a common myth that wolves howl at the
+                moon, or that the moon has anything to do with wolf communication.
+                While wolves can and do howl at night, it is not directed at the moon
+                and is to communicate with other pack members. 4.- Newborn wolf pups
+                weigh about 1 pound when they are born and are brown in color. They
+                don’t get their final adult coloration until much later.
+              </div>
+              <img
+                src="https://www.euronatur.org/fileadmin/_processed_/b/6/csm_Wolf_Portrait-_c_-Joachim-Flachs_aaf110a71d.jpg"
+                class="container-md"
+              />
+            </div>
+          </section>
+          <section class="page-section bg-dark text-white" id="behaviour">
+            <div class="container px-4 px-lg-5">
+              <h3>Behaviour</h3>
+              <div>
+                THE BOND Living in a pack not only facilitates the raising and feeding
+                of pups, coordinated and collaborative hunting, and the defense of
+                territory, it also allows for the formation of many unique emotional
+                bonds between pack members, the foundation for cooperative living.
+                Wolves care for each other as individuals. They form friendships and
+                nurture their own sick and injured. Pack structure enables
+                communication, the education of the young and the transfer of
+                knowledge across generations. Wolves and other highly social animals
+                have and pass on what can be best described as culture. A family group
+                can persevere for several generations, even decades, carrying
+                knowledge and information through the years, from generation to
+                generation. Wolves play together into old age, they raise their young
+                as a group, and they care for injured companions. When they lose a
+                pack mate, there is evidence that they suffer and mourn that loss.
+                When we look at wolves, we are looking at tribes—extended families,
+                each with its own homeland, history, knowledge, and indeed, culture.
+              </div>
+              <img
+                src="https://images.immediate.co.uk/production/volatile/sites/4/2018/11/GettyImages-1048926308-5261ab4.jpg?quality=90&resize=940%2C400"
+                class="container-md"
+              />
+            </div>
+          </section>
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2021 - Company Name</div></div>
@@ -297,5 +566,73 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script type="text/javascript">
+           function searchAndHighlight(searchTerm, selector) {
+            if (searchTerm) {               
+                var selector = selector || "#realTimeContents"; //use body as selector if none provided
+                var searchTermRegEx = new RegExp(searchTerm, "ig");
+                var matches = $(selector).text().match(searchTermRegEx);
+                if (matches != null && matches.length > 0) {
+                    $('.highlighted').removeClass('highlighted'); //Remove old search highlights 
+ 
+                    //Remove the previous matches
+                    $span = $('#realTimeContents span');
+                    $span.replaceWith($span.html());
+ 
+                    if (searchTerm === "&") {
+                        searchTerm = "&amp;";
+                        searchTermRegEx = new RegExp(searchTerm, "ig");
+                    }
+                    $(selector).html($(selector).html().replace(searchTermRegEx, "<span class='match'>" + searchTerm + "</span>"));
+                    $('.match:first').addClass('highlighted');
+ 
+                    var i = 0;
+ 
+                    $('.next_h').off('click').on('click', function () {
+                        i++;
+ 
+                        if (i >= $('.match').length) i = 0;
+ 
+                        $('.match').removeClass('highlighted');
+                        $('.match').eq(i).addClass('highlighted');
+                        $('.ui-mobile-viewport').animate({
+                            scrollTop: $('.match').eq(i).offset().top
+                        }, 300);
+                    });
+                    $('.previous_h').off('click').on('click', function () {
+ 
+                        i--;
+ 
+                        if (i < 0) i = $('.match').length - 1;
+ 
+                        $('.match').removeClass('highlighted');
+                        $('.match').eq(i).addClass('highlighted');
+                        $('.ui-mobile-viewport').animate({
+                            scrollTop: $('.match').eq(i).offset().top
+                        }, 300);
+                    });
+ 
+ 
+ 
+ 
+                    if ($('.highlighted:first').length) { //if match found, scroll to where the first one appears
+                        $(window).scrollTop($('.highlighted:first').position().top);
+                    }
+                    return true;
+                }
+            }
+            return false;
+        }
+ 
+        $(document).on('click', '.searchButtonClickText_h', function (event) {
+ 
+            $(".highlighted").removeClass("highlighted").removeClass("match");
+            if (!searchAndHighlight($('.textSearchvalue_h').val())) {
+                alert("No results found");
+            }
+ 
+ 
+        });
+        </script>
     </body>
 </html>
